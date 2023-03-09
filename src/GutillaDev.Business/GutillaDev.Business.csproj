@@ -5,4 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Validations\" />
+    <Folder Include="Services\" />
+    <Folder Include="Notificacoes\" />
+  </ItemGroup>
+
 </Project>
