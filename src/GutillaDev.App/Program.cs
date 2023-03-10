@@ -1,5 +1,7 @@
 using GutillaDev.App.Data;
+using GutillaDev.Business.Interfaces;
 using GutillaDev.Data.Context;
+using GutillaDev.Data.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +26,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddScoped<MeuDbContext>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddScoped<IFornecedorRepository, FornecedorRepository>();
+builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 
 var app = builder.Build();
 
