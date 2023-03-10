@@ -1,4 +1,4 @@
-﻿using GutillaDev.App.Models;
+﻿using GutillaDev.App.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

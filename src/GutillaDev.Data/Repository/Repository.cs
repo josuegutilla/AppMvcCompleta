@@ -2,12 +2,7 @@
 using GutillaDev.Business.Models;
 using GutillaDev.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GutillaDev.Data.Repository
 {
@@ -51,7 +46,7 @@ namespace GutillaDev.Data.Repository
         public virtual async Task Remover(Guid id)
         {
             DbSet.Remove(new TEntity { Id = id });
-            SaveChanges();
+            await SaveChanges();
         }
 
         public async Task<int> SaveChanges()
