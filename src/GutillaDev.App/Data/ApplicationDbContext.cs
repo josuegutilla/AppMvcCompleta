@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using GutillaDev.App.ViewModels;
 
 namespace GutillaDev.App.Data
 {
